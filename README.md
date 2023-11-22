@@ -1,5 +1,8 @@
-# Python Starter
+# Python DATA Structures and Algorithm 
 
-Quickly get started with [Python](https://www.python.org/) using this starter! 
+Beginners to advanced implementation of data Structures and Algorithm
+This is based on udemy course by Elshad Karimov. 
 
-- If you want to upgrade Python, you can change the image in the [Dockerfile](./.devcontainer/Dockerfile).
+Topics Covered
+- Linked List
+    - Singly Linked List

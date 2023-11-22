@@ -35,6 +35,14 @@ class LinkedList:
             print(current_node.value)
             current_node = current_node.next
 
+    def search(self, target):
+        current_node = self.head
+        while current_node:
+            if current_node.value == target:
+                return True
+            current_node = current_node.next
+        return False
+
     '''
     Insertion of nodes 
     1. Start of LinkedList - Prepend
@@ -94,4 +102,5 @@ new_linked_list.prepend(5)
 print(new_linked_list)
 new_linked_list.insert(15, -1)
 print(new_linked_list)
-new_linked_list.traversal()
+# new_linked_list.traversal()
+print(new_linked_list.search(2))

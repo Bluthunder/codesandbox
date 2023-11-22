@@ -45,6 +45,21 @@ class LinkedList:
             index += 1
         return -1
 
+    def get(self, index):
+        current_node = self.head
+        if index < 0 or index > self.length:
+            return None
+        for _ in range(index):
+            current_node = current_node.next
+        return current_node
+
+    def setValue(self, index, value):
+        temp_node = self.get(index)
+        if temp_node:
+            temp_node.value = value
+            return True
+        return False
+
     '''
     Insertion of nodes 
     1. Start of LinkedList - Prepend
@@ -106,3 +121,5 @@ new_linked_list.insert(15, -1)
 print(new_linked_list)
 # new_linked_list.traversal()
 print(new_linked_list.search(5))
+print(new_linked_list.setValue(2, 111))
+print(new_linked_list)

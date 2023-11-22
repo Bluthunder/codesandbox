@@ -106,6 +106,25 @@ class LinkedList:
             temp_node.next = new_node
         self.length += 1
 
+    '''
+    Pop first - remove first node from LinkedList
+    Pop - 
+    Remove
+    '''
+
+    def pop_first(self):
+        if self.length == 0:
+            return None
+        popped_node = self.head
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next
+            popped_node.next = None
+        self.length -= 1
+        return popped_node
+
 
 # Tests
 new_linked_list = LinkedList()
@@ -122,4 +141,6 @@ print(new_linked_list)
 # new_linked_list.traversal()
 print(new_linked_list.search(5))
 print(new_linked_list.setValue(2, 111))
+print(new_linked_list)
+print(new_linked_list.pop_first())
 print(new_linked_list)

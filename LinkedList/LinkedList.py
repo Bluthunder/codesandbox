@@ -108,7 +108,7 @@ class LinkedList:
 
     '''
     Pop first - remove first node from LinkedList
-    Pop - 
+    Pop - remove last node from LinkedList
     Remove
     '''
 
@@ -125,8 +125,23 @@ class LinkedList:
         self.length -= 1
         return popped_node
 
+    def pop(self):
+        if self.length == 0:
+            return None
+        popped_node = self.tail
+        if self.length == 1:
+            self.head = self.tail = 1
+        else:
+            temp = self.head
+            while temp.next is not self.tail:
+                temp = temp.next
+            self.tail = temp
+            temp.next = None
+        self.length -= 1
+        return popped_node
 
-# Tests
+
+        # Tests
 new_linked_list = LinkedList()
 new_linked_list.prepend(10)
 new_linked_list.append(20)
@@ -142,5 +157,7 @@ print(new_linked_list)
 print(new_linked_list.search(5))
 print(new_linked_list.setValue(2, 111))
 print(new_linked_list)
-print(new_linked_list.pop_first())
+new_linked_list.pop_first()
+print(new_linked_list)
+new_linked_list.pop()
 print(new_linked_list)

@@ -154,7 +154,13 @@ class LinkedList:
         self.length -= 1
         return popped_node
 
-        # Tests
+    def delete_all(self):
+        self.head = None
+        self.tail = None
+        self.length = 0
+
+
+# Tests
 new_linked_list = LinkedList()
 new_linked_list.prepend(10)
 new_linked_list.append(20)

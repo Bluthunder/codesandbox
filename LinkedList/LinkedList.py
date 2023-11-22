@@ -29,6 +29,12 @@ class LinkedList:
             temp_node = temp_node.next
         return result
 
+    def traversal(self):
+        current_node = self.head
+        while current_node:
+            print(current_node.value)
+            current_node = current_node.next
+
     '''
     Insertion of nodes 
     1. Start of LinkedList - Prepend
@@ -88,3 +94,4 @@ new_linked_list.prepend(5)
 print(new_linked_list)
 new_linked_list.insert(15, -1)
 print(new_linked_list)
+new_linked_list.traversal()
